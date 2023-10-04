@@ -26,8 +26,8 @@ modules:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       #- distrobox
-      #- gnome-tweaks
-      #- krb5-workstation 
+      - gnome-tweaks
+      - krb5-workstation 
       #- libvirt-daemon 
       #- libvirt-daemon-driver-network 
       #- libvirt-daemon-driver-nodedev 
@@ -42,8 +42,8 @@ modules:
       #- systemd-container 
       #- tailscale 
       #- tmux 
-      - yaru-theme
-      - https://prerelease.keybase.io/keybase_amd64.rpm
+      #- yaru-theme
+      #- https://prerelease.keybase.io/keybase_amd64.rpm
 
       # - micro
       # - starship
