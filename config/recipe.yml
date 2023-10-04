@@ -40,8 +40,8 @@ modules:
       #- ripgrep 
       #- sysstat 
       #- systemd-container 
-      #- tailscale 
-      #- tmux 
+      - tailscale 
+      - tmux 
       #- yaru-theme
       #- https://prerelease.keybase.io/keybase_amd64.rpm
 
