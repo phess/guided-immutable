@@ -6,7 +6,8 @@
 # Editing this file directly is an unsupported configuration.
 
 # Tell build process to exit if there are any errors.
-set -oue pipefail
+### phess -- disabling this as it prevents package installs due to natural occurrence of failures within RPMs' postinstall scripts.
+#set -oue pipefail
 
 export CONFIG_DIRECTORY="/tmp/config"
 RECIPE_FILE="$CONFIG_DIRECTORY/$RECIPE"
