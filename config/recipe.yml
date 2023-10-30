@@ -39,6 +39,7 @@ modules:
       - pam-u2f 
       - pamu2fcfg 
       - ripgrep 
+      - strace
       - sysstat 
       - systemd-container 
       - tailscale 
