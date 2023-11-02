@@ -7,7 +7,7 @@
 
 # Tell build process to exit if there are any errors.
 ### phess -- disabling this as it prevents package installs due to natural occurrence of failures within RPMs' postinstall scripts.
-set -oue pipefail
+#set -oue pipefail
 
 export CONFIG_DIRECTORY="/tmp/config"
 RECIPE_FILE="$CONFIG_DIRECTORY/$RECIPE"
@@ -43,11 +43,11 @@ run_modules() {
     readarray MODULES < <(yq -o=j -I=0 '.modules[]' "$MODULES_FILE" )
     if [[ ${#MODULES[@]} -gt 0 ]]; then
         for MODULE in "${MODULES[@]}"; do
-            # rpm-ostree fails to install several packages with `set -oue pipefail`
-            [ "$module" = "rpm-ostree" ] && set +oue pipefail
+            ## rpm-ostree fails to install several packages with `set -oue pipefail`
+            #[ "$module" = "rpm-ostree" ] && set +oue pipefail
             run_module "$MODULE"
-            # undo the one-off rpm-ostree-specific setting.
-            [ "$module" = "rpm-ostree" ] && set -oue pipefail
+            ## undo the one-off rpm-ostree-specific setting.
+            #[ "$module" = "rpm-ostree" ] && set -oue pipefail
         done
     else
         MODULE=$(yq -o=j -I=0 '.' "$MODULES_FILE")
