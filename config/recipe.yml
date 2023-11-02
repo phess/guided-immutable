@@ -29,6 +29,7 @@ modules:
       - distrobox
       - gnome-shell-extension-user-theme
       - gnome-tweaks
+      - iptraf-ng
       - krb5-workstation 
       - libvirt-daemon 
       - libvirt-daemon-driver-network 
