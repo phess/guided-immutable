@@ -30,24 +30,24 @@ modules:
       - gnome-shell-extension-user-theme
       - gnome-tweaks
       - iptraf-ng
-      - krb5-workstation 
-      - libvirt-daemon 
-      - libvirt-daemon-driver-network 
-      - libvirt-daemon-driver-nodedev 
-      - libvirt-daemon-driver-qemu 
-      - libvirt-daemon-driver-storage 
-      - qemu-kvm 
-      - nmap 
+      - krb5-workstation
+      - libvirt-daemon
+      - libvirt-daemon-driver-network
+      - libvirt-daemon-driver-nodedev
+      - libvirt-daemon-driver-qemu
+      - libvirt-daemon-driver-storage
+      - qemu-kvm
+      - nmap
       - openssl
-      - pam-u2f 
-      - pamu2fcfg 
-      - ripgrep 
+      - pam-u2f
+      - pamu2fcfg
+      - ripgrep
       - strace
-      - sysstat 
-      - systemd-container 
-      - tailscale 
+      - sysstat
+      - systemd-container
+      - tailscale
       - tcpdump
-      - tmux 
+      - tmux
       - yaru-theme
       - https://prerelease.keybase.io/keybase_amd64.rpm
 
@@ -78,27 +78,16 @@ modules:
   #  custom-flatpaks: # this section is optional
   #    # - Celluloid: io.github.celluloid_player.Celluloid
   #    # - Krita: org.kde.krita
-  - type: default-flatpaks
-    user:
-      repo-name: flathub
-      install:
-      #  - org.mozilla.firefox
-
-  - type: default-flatpaks
-    user:
-      repo-name: fedora
-      install:
-      #  - some.thing
 
   - type: fonts
       fonts:
         nerd-fonts:
-      #    - FiraCode # don't add "Nerd Font" suffix.
-      #    - Hack
+          #- FiraCode # don't add "Nerd Font" suffix.
+          #- Hack
           - SourceCodePro
           - Terminus
           - JetBrainsMono
-      #    - NerdFontsSymbolsOnly
+          #- NerdFontsSymbolsOnly
         google-fonts:
           - Roboto
           - Open Sans
