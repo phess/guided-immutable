@@ -43,11 +43,7 @@ run_modules() {
     readarray MODULES < <(yq -o=j -I=0 '.modules[]' "$MODULES_FILE" )
     if [[ ${#MODULES[@]} -gt 0 ]]; then
         for MODULE in "${MODULES[@]}"; do
-            ## rpm-ostree fails to install several packages with `set -oue pipefail`
-            #[ "$module" = "rpm-ostree" ] && set +oue pipefail
             run_module "$MODULE"
-            ## undo the one-off rpm-ostree-specific setting.
-            #[ "$module" = "rpm-ostree" ] && set -oue pipefail
         done
     else
         MODULE=$(yq -o=j -I=0 '.' "$MODULES_FILE")
