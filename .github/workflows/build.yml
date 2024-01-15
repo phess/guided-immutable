@@ -7,7 +7,7 @@
 name: build-orangeblue
 on: # https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows
   schedule:
-    - cron: "20 22 * * 0,1,2,3,4,5"
+    - cron: "20 22 * * 0,1,2,3,4,5"  # Sunday~Friday @ 22:20 UTC
   push:
     branches:
       - live
