@@ -50,10 +50,13 @@ modules:
       - tmux
       - yaru-theme
       - https://prerelease.keybase.io/keybase_amd64.rpm
+      - vim-default-editor
 
       # - micro
       # - starship
-    #remove:
+    remove:
+      - toolbox
+      - nano-default-editor
     #  - firefox # default firefox removed in favor of flatpak
     #  - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
 
