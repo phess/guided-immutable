@@ -47,6 +47,7 @@ modules:
       - systemd-container
       - tailscale
       - tcpdump
+      - tlp
       - tmux
       - yaru-theme
       - https://prerelease.keybase.io/keybase_amd64.rpm
